@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+
+<!--
+File: index.html
+GUI Assignment: Implementing a Bit of Scrabble with Drag-and-Drop
+Ssuna Mulindwa, UMass Lowell Computer Science, ssuna_mulindwa@student.uml.edu
+Copyright (c) 2021 by ssunaMulindwa. All rights reserved. May be freely copied or
+excerpted for educational purposes with credit to the author.
+updated by SM on August 15, 2021 at 9:23 AM
+-->
+
+
+<html lang="en-US">
+    <head>
+        <meta charset="UTF-8">
+        <title>Scrabble Online</title>
+        <!-- jQuery UI css -->
+        <link type="text/css" rel="stylesheet" href="css/jquery-ui.min.css">
+        <!-- stylesheets -->
+        <link type="text/css" rel="stylesheet" href="css/scrabble.css">
+    </head>
+
+    <body>
+        <!-- main div -->
+        <div id="main">
+            <!--left panel -->
+            <div id="panel-left">
+                <!-- information box with Letter Rack and Score -->
+                <div id="info">
+                    <!-- Letter Rack -->
+                    <div id="tiles-rack" class="shadow">
+                    </div>
+                    <!-- Reset and Exchange Title -->
+                    <div id="shuff-exchange">
+                        <input type="submit" id="resetgame" value="RESET GAME">
+                        <input type="submit" id="exchange" value="EXCHANGE TILES">
+
+                    </div>
+                    <div id="C_Board">
+                        <input type="submit" id="back_rack" value="BACK TO RACK">
+                        <input type="submit" id="clear_board" value="CLEAR GAMEBOARD">
+                    </div>
+                    <!-- Score and OK button -->
+                    <div id="scoreok">
+                        <div class="score_left">Total Score: <span id="score"></span></div>
+                        <div class="score_right"><input type="submit" id="ok" value="OK"></div>
+                    </div>
+                </div>
+                <div id="bagtiles">
+                </div>
+            </div>
+            <!--game board table -->
+            <div class="container">
+                <div class="title">SCRABBLE GAME</div>
+                <div id="game_board"></div>
+                <div class="error"></div>
+
+
+            </div>
+
+        </div>
+
+        <!--Display footer-->
+        <div class="clear"></div>
+        <div id="footer">
+            <p>Copyright &copy; 2021 </p>
+
+        </div>
+    <!-- jQuery -->
+    <script src="javascript/jquery-3.1.1.min.js"></script>
+    <!-- jQuery UI-->
+    <script src="javascript/jquery-ui.min.js"></script>
+    <!-- jQuery Validation plugin -->
+    <script src="javascript/jquery.validate.js"></script>
+    <!-- Global Array for Scrabble Pieces-->
+    <script type="text/javascript" src="javascript/Scrabble_Pieces_AssociativeArray_Jesse.js"></script>
+    <!-- Function to Generate Scrabble Board-->
+    <script type="text/javascript" src="javascript/Board.js"></script>
+    <!-- Function to Remain Word-->
+    <script type="text/javascript" src="javascript/Remainder.js"></script>
+    <!--load javascript file-->
+    <script type="text/javascript" src="javascript/DragAndDrop.js"></script>
+    </body>
+</html>

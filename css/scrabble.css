@@ -1,0 +1,306 @@
+/*
+File: scrabble.css
+GUI Assignment: Implementing a Bit of Scrabble with Drag-and-Drop
+Ssuna Mulindwa, UMass Lowell Computer Science, ssuna_mulindwa@student.uml.edu
+Copyright (c) 2021 by ssunaMulindwa. All rights reserved. May be freely copied or
+excerpted for educational purposes with credit to the author.
+updated by SM on August 15, 2021 at 9:23 AM
+*/
+
+
+body{
+   /*background */
+    background-image: url("../img/background.png");
+    text-align: center;
+}
+
+/*Main div with red color border */
+#main {
+    border-color: red;
+    border-style: solid;
+    border-radius: 5px;
+    height: 100%;
+    display: table;
+    margin: auto;
+    position: relative;
+}
+
+/* left div in main */
+#panel-left {
+    border-color: green;
+    border-style: solid;
+    /* display: table-cell; */
+    float: left;
+    position: static;
+    border-radius: 10px;
+
+}
+
+
+
+/*game board and title */
+.container {
+    display: table;
+}
+
+/*game board */
+#game_board {
+    border-color: #0000FF;
+    border-style: solid;
+    /* display: table; */
+    /* float: right; */
+/*  width: 70%;*/
+    min-height: 10px;
+}
+
+/* Information box for titles rack, buttons, score */
+#info {
+    border-color: red;
+    border-style: solid;
+    height: 260px;
+    border-radius: 8px;
+}
+
+/*Letter Rack */
+#tiles-rack {
+    border-color: black;
+    border-style: solid;
+    height: 60px;
+    margin: auto;
+    border-radius: 5px;
+    position:relative;
+}
+
+/* images in the rack */
+#tiles-rack  img {
+    border: 1px solid;
+    height: 50px;
+    width: 50px;
+    display: inline-block;
+    margin: 3px;
+}
+
+/* main div for exchange and reset button */
+#shuff-exchange{
+    text-align: center;
+    border-color: green;
+    border-style: solid;
+    height: 55px;
+    margin: 0 auto;
+}
+
+/* Reset game button */
+#resetgame {
+    margin-top: 3px;
+    width: 180px;
+    height: 50px;
+    border-radius: 7px;
+	background-color: red;
+}
+
+/* exchange title button */
+#exchange {
+    margin-top: 3px;
+    width: 180px;
+    height: 50px;
+    border-radius: 7px;
+
+}
+
+/* Clear gameboard div */
+#C_Board {
+    margin: 0 auto;
+    text-align: center;
+    border-color: blue;
+    border-style: solid;
+    height: 55px;
+}
+
+/* Clear gameboard button */
+#clear_board {
+    margin-top: 3px;
+    width: 150px;
+    height: 50px;
+    border-radius: 7px;
+}
+
+#back_rack{
+	margin-top: 3px;
+    width: 150px;
+    height: 50px;
+    border-radius: 7px;
+}
+
+/* OK button */
+#ok {
+    width: 180px;
+    height: 50px;
+    border-radius: 7px;
+    float: right;
+	font-size: 2em;
+	background-color: green;
+}
+
+
+
+
+
+/* SCRABBLE ONLINE title */
+.title  {
+    margin: auto;
+    text-align: center;
+    font-size: 2em;
+    font-weight: bold;
+    color: blue;
+}
+
+/* Error message */
+.error {
+    margin: auto;
+    text-align: center;
+    font-size: 20px;
+    font-weight: bold;
+    color: red;
+	height: 40px;
+
+}
+
+/* Remain Left table */
+#bagtiles {
+    /* border-color: black  border-style: solid; */
+    font-weight: bold;
+    height: 100%;
+    width: 100%;
+}
+
+/*table cell in remaning box */
+.remainword {
+    margin: auto;
+}
+
+/* normal word class */
+.RWord {
+    text-align: center;
+    width: 38px;
+    height: 38px;
+}
+
+/* container for score and ok button */
+#scoreok {
+    display:table;
+    width:100%;
+    height:100%;
+    margin: 0 auto;
+}
+
+/* score style */
+.score_left {
+    margin: 20px 50px auto;
+    display:table-cell;
+    float: left;
+}
+
+/* ok button */
+.score_right {
+    display:table-cell;
+    margin: 10px;
+    float: right;
+}
+
+/* score text size */
+#score {
+    font-size: 1.5em;
+}
+
+
+/* Change the color after accepted */
+#accepted {
+    border-color: red;
+}
+
+/* One the letter is accpet, no longer can be drag */
+#imgAccepted {
+    border-color: red;
+    /* pointer-events: none; */
+}
+
+/* all td tag in html */
+td {
+  background: #D2B48C;
+  border: 1px solid white;
+  resize: both;
+  height: 50px;
+  width: 50px;
+  z-index: 3;
+}
+
+/* img in td tag */
+#tbBoard img {
+    display:block;
+    width: 100%;
+    height: 50px;
+    margin: auto;
+}
+
+/* td in RackWord*/
+#RackWord td {
+    border: 1px solid green;
+    width: 50px;
+    height: 50px;
+}
+
+/* img in RackWord */
+#RackWord img {
+    display:block;
+    width: 100%;
+    height: 50px;
+    margin: auto;
+}
+
+/*
+.TxWord, DxWord, TxLetter, DxLetter is use for check the double or triple score
+*/
+.TxWord {
+    background-image: url("../img/score/trippleWord.jpg");
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+}
+
+.DxWord {
+    background-image: url("../img/score/doubleWord.png");
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+}
+
+.TxLetter {
+    background-image: url("../img/score/trippleScore.jpg");
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+}
+
+.DxLetter {
+    background-image: url("../img/score/doubleScore.jpg");
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+}
+
+.Smile {
+    background-image: url("../img/scrabble/smile.png");
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+}
+
+
+/*footer use only */
+#footer {
+    color: black;
+    font-style: italic;
+    margin: auto;
+
+}
+
+
+/*make div in stay in order*/
+.clear{
+    clear: both;
+}
